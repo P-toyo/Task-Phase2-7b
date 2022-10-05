@@ -29,11 +29,13 @@
           </td>
         </tr>
       </table>
+
       <div id="comment_index">
         <%= render "comments", post_book: @post_book %>
       </div>
-      <div class="form-group" id="comment_form">
-        <%= render "commentform", { book_comment: @book_comment, post_book: @post_book } %>
+
+      <div id="comment_form">
+        <%= render "commentform", {post_book: @post_book, book_comment: @book_comment} %>
       </div>
 
     </div>
