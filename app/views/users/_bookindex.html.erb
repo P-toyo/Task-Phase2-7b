@@ -49,7 +49,7 @@
           <% if @yesterday_book.count == 0 %>
             前日の投稿はありません
           <% else %>
-            <%= @yesterday_book.count / @today_book.count * 100 %>%
+            <%= (@yesterday_book.count.to_f / @today_book.count.to_f * 100).floor(0) %>%
           <% end %>
         </td>
       </tr>
@@ -72,7 +72,7 @@
           <% if @last_week_book.count == 0 %>
             前週の投稿はありません
           <% else %>
-            <%= @last_week_book.count / @this_week_book.count * 100 %>%
+            <%= (@this_week_book.count.to_f / @last_week_book.count.to_f * 100).floor(0) %>%
           <% end %>
         </td>
       </tr>
